@@ -9,9 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.example.tao.entity.Product;
 
 @Repository
-public interface TaoRepository extends JpaRepository<Product, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
 	
-	@Query(nativeQuery=true, value="select * from Product where status='Active'")
-	List<Product> getProductByActiveStatus();
 	
 }
