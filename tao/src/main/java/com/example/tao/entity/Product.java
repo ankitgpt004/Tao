@@ -1,6 +1,6 @@
 package com.example.tao.entity;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,7 +17,7 @@ public class Product {
 	private Long productId;
 	private String productName;
 	private int price;
-	private Date createdDate;
+	private LocalDateTime createdDate;
 	private String status;
 	
 	public Long getProductId() {
@@ -38,11 +38,11 @@ public class Product {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public Date getCreatedDate() {
+	public LocalDateTime getCreatedDate() {
 		return createdDate;
 	}
-	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
+	public void setCreatedDate(LocalDateTime localDateTime) {
+		this.createdDate = localDateTime;
 	}
 	public String getStatus() {
 		return status;
@@ -50,7 +50,7 @@ public class Product {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public Product(Long productId, String productName, int price, Date createdDate, String status) {
+	public Product(Long productId, String productName, int price, LocalDateTime createdDate, String status) {
 		super();
 		this.productId = productId;
 		this.productName = productName;
